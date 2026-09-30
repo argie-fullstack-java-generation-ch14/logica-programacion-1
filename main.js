@@ -36,6 +36,10 @@ rl.question('Ingresa un número: ', (num1) => {
         c = temp
       }
 
+      if (a === b && b === c) {
+        console.log('Los tres números son iguales');
+      }
+
       console.log(a, b, c);
       console.log(c, b, a);
       rl.close();
