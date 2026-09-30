@@ -30,7 +30,7 @@ El programa pedirá los tres números uno a uno en la consola.
 
 ## Cómo lo resolví - el algoritmo en un dibujo
 
-![Algoritmo de ordenamiento de tres números dibujado a mano](visual-algorithm.jpg)
+![Algoritmo de ordenamiento de tres números dibujado a mano](images/visual-algorithm.jpg)
 
 ### Uso de la variable temp para intercambiar datos
 
@@ -40,15 +40,30 @@ Por ejemplo, si a = 2 y b = 7: al ejecutar a = b, la variable a pasa a valer 7, 
 
 Para evitar esto, se crea el contenedor temporal (temp), que guarda el valor inicial de a (el 2) de forma provisional mientras dura el movimiento, permitiendo completar el intercambio de manera correcta.
 
+### La ilustración del tazón temporal para poder intercambiar el contenido de otros tazones
+
 Para ilustrarlo, supongamos que tengo un tazón Amarillo (a) y un tazón Blanco (b). Debo tener en el tazón Amarillo (a), arroz con leche y en el Blanco (b) mazamorra, pero están intercambiados, en el Amarillo actualmente está la mazamorra y en el Blanco el arroz con leche.
 
--- insertar aqui imagen 1.
+![Dos tazones con los postres intercambiados: el tazón Amarillo contiene mazamorra y el tazón Blanco contiene arroz con leche](images/img-1.jpg)
 
  No puedo servir directamente el contenido del tazón Blanco dentro del tazón Amarillo, porque la mazamorra terminaría cayendo encima del arroz con leche, arruinando los postres originales.
 
-Para resolver este problema sin mezclar ni perder ninguno de los postres busco en mi despensa mi tazón Temporal.
+Para resolver este problema sin mezclar ni perder ninguno de los postres busco en mi despensa mi tazón Rojo (Temporal).
 
-Entonces ahi ya puedo mover el arroz con leche a mi tazón Temporal, vaciando por completo el tazón Balnco. Y ahora que el tazón Blanco quedó libre, puedo pasar tranquilamente la mazamorra desde el tazón Amarillo hacia su recipiente correcto, el tazón Blanco. Finalmente, tomo el arroz con leche que serví provisionalmente en el tazón Temporal y lo paso al tazón Amarillo que acaba de desocuparse. Gracias a ese tazón auxiliar que me sirvió de puente, logré intercambiar los postres entre sus recipientes originales sin inconvenientes.
+Entonces ahí:
+1. ya puedo mover el arroz con leche a mi tazón Rojo (Temporal), vaciando por completo el tazón Balnco.
+
+![El arroz con leche fue movido al tazón Rojo (Temporal) y el tazón Blanco quedó vacío](images/img-2.jpg)
+
+2. Y ahora que el tazón Blanco quedó libre, puedo pasar tranquilamente la mazamorra desde el tazón Amarillo hacia su recipiente correcto, el tazón Blanco.
+
+![La mazamorra pasó del tazón Amarillo al tazón Blanco, que ahora queda libre y ocupa su lugar correcto](images/img-3.jpg)
+
+3. Finalmente, tomo el arroz con leche que serví provisionalmente en el tazón Rojo (Temporal) y lo paso al tazón Amarillo que acaba de desocuparse.
+
+![El arroz con leche del tazón Rojo (Temporal) pasó al tazón Amarillo, completando el intercambio de los postres](images/img-4.jpg)
+
+Gracias a ese tazón auxiliar que me sirvió de puente, logré intercambiar los postres entre sus recipientes originales sin inconvenientes.
 
 ### Casteo con `Number()`
 
